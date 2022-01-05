@@ -1,15 +1,15 @@
+import Navbar from "../components/Frame/Navbar.js";
+
 export default function Home() {
     return (
-        <div className="flex min-h-screen justify-center items-center">
-            <div className="max-w-xs rounded overflow-hidden shadow-lg my-2">
-                <img
-                    className="w-full"
-                    src="https://tailwindcss.com/img/card-top.jpg"
-                    alt="Sunset in the mountains"
-                />
-                <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">Starzam</div>
-                    <p className="text-grey-darker text-base">Oh hi.</p>
+        <div className="absolute w-screen">
+            <Navbar />
+            <div className="static bg-dark h-screen text-center pt-[20vh]">
+                <div className="text-pink font-title text-[14vw] md:text-[10vw] lg:text-[8vw] ">
+                    Starzam.
+                </div>
+                <div className="text-white font-title text-[4vw] md:text-[3vw] lg:text-[2.5vw] ">
+                    Star properties, measured from songs.
                 </div>
             </div>
         </div>
