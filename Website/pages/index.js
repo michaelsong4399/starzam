@@ -12,6 +12,8 @@ export default function Home() {
                     Star properties, measured from songs.
                 </div>
             </div>
+            <div className="static bg-dark h-screen text-center pt-[20vh]"></div>
+            <div className="static bg-dark h-screen text-center pt-[20vh]"></div>
         </div>
     );
 }
