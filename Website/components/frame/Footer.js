@@ -19,7 +19,9 @@ function Footer() {
         getVersion();
         return (
             <a
+                target="_blank"
                 className="transition-all hover:transition-all hover:text-pink"
+                rel="noopener noreferrer"
                 href={
                     "https://github.com/michaelsong4399/starzam/releases/tag/" +
                     version
@@ -39,9 +41,13 @@ function Footer() {
                     Starzam <ReleaseVersion />
                 </span>
                 |
-                <span className="ml-[1vw] mr-[1vw] transition-all ">
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/michaelsong4399/starzam/blob/48aa66fcafd7973a0383114b160cf8fadddd7c37/LICENSE"
+                    className="ml-[1vw] mr-[1vw] transition-all ">
                     MIT License
-                </span>
+                </a>
                 |<span className="ml-[1vw] mr-[1vw] transition-all ">2022</span>
                 |
                 <a
