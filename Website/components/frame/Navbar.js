@@ -31,7 +31,7 @@ function Navbar() {
                 <a
                     className="text-[3.5vw] lg:text-[2vw] ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink"
                     target="_blank"
-                    href="https://github.com/michaelsong4399"
+                    href="https://github.com/michaelsong4399/starzam"
                     rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                 </a>

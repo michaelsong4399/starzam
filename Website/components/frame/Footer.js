@@ -1,4 +1,34 @@
+import { useState } from "react";
+import { Octokit } from "@octokit/core";
+
 function Footer() {
+    const [version, setVersion] = useState("");
+    async function getVersion() {
+        const octokit = new Octokit();
+        await octokit
+            .request("GET /repos/{owner}/{repo}/releases", {
+                owner: "michaelsong4399",
+                repo: "starzam",
+            })
+            .then((res) => {
+                setVersion(res.data[0]["tag_name"]);
+            });
+    }
+
+    function ReleaseVersion() {
+        getVersion();
+        return (
+            <a
+                className="transition-all hover:transition-all hover:text-pink"
+                href={
+                    "https://github.com/michaelsong4399/starzam/releases/tag/" +
+                    version
+                }>
+                {version}
+            </a>
+        );
+    }
+
     return (
         <div className="flex items-center justify-between py-6 border-t-2 border-pink bg-dark">
             {/* Left */}
@@ -6,7 +36,7 @@ function Footer() {
             {/* Right */}
             <div className="flex items-center text-[3vw] lg:text-[1.5vw] ml-[3vw] mr-[5vw] text-white font-subtitle">
                 <span className="ml-[1vw] mr-[1vw] transition-all ">
-                    Starzam v1.0.0
+                    Starzam <ReleaseVersion />
                 </span>
                 |
                 <span className="ml-[1vw] mr-[1vw] transition-all ">
