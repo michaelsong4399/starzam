@@ -18,21 +18,23 @@ function Navbar() {
                         Method
                     </a>
                 </Link>
-                <Link href="/method">
+                <Link href="/impact">
                     <a className="ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink">
                         Impact
                     </a>
                 </Link>
-                <Link href="/method">
+                <Link href="/people">
                     <a className="ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink">
                         People
                     </a>
                 </Link>
-                <Link href="/method">
-                    <a className="ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink">
-                        <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-                    </a>
-                </Link>
+                <a
+                    className="text-[3.5vw] lg:text-[2vw] ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink"
+                    target="_blank"
+                    href="https://github.com/michaelsong4399"
+                    rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                </a>
             </div>
         </div>
     );
