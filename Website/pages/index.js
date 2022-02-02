@@ -10,7 +10,7 @@ export default function Home() {
                     Starzam.
                 </div>
                 <div className="text-white font-title text-[4vw] md:text-[3vw] lg:text-[2.5vw] ">
-                    Star properties, measured from songs.
+                    Star properties, measured from light curves.
                 </div>
             </div>
             <div className="static bg-dark h-[23vh] text-center border-solid border-t-2 md:h-[40vh]">
@@ -22,7 +22,7 @@ export default function Home() {
                         <div className="text-pink font-title text-[8vw] lg:text-[6vw]">
                             99.7%
                         </div>
-                        <div className="text-white font-title text-[3vw] md:text-[2vw] ">
+                        <div className="text-white font-subtitle text-[3vw] md:text-[2vw] ">
                             Suface Gravity
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export default function Home() {
                         <div className="text-pink font-title text-[8vw] lg:text-[6vw]">
                             76.9%
                         </div>
-                        <div className="text-white font-title text-[3vw] md:text-[2vw] ">
+                        <div className="text-white font-subtitle text-[3vw] md:text-[2vw] ">
                             Effective Temperature
                         </div>
                     </div>
@@ -38,7 +38,7 @@ export default function Home() {
                         <div className="text-pink font-title text-[8vw] lg:text-[6vw]">
                             92.7%
                         </div>
-                        <div className="text-white font-title text-[3vw] md:text-[2vw] ">
+                        <div className="text-white font-subtitle text-[3vw] md:text-[2vw] ">
                             Metallicity
                         </div>
                     </div>

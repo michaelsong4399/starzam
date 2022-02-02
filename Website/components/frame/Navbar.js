@@ -13,6 +13,11 @@ function Navbar() {
             </Link>
             {/* Right */}
             <div className="flex items-center text-[3vw] lg:text-[1.5vw] ml-[3vw] mr-[5vw] text-white font-subtitle">
+                <Link href="/background">
+                    <a className="ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink">
+                        Background
+                    </a>
+                </Link>
                 <Link href="/method">
                     <a className="ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink">
                         Method
