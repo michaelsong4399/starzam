@@ -1,15 +1,52 @@
 import Navbar from "../components/frame/Navbar.js";
 import Footer from "../components/frame/Footer.js";
+import Titlebar from "../components/frame/Titlebar.js";
+import React, { useState, useEffect } from "react";
 
 export default function Background() {
+    useEffect(() => {
+        // Get all the elements you want to show on scroll
+        function checkPos() {
+            const targets = document.querySelectorAll(".js-show-on-scroll");
+            // console.log(targets);
+            targets.forEach((target) => {
+                let el = target.getBoundingClientRect().top;
+                // console.log(el);
+                if (el <= 400) {
+                    target.classList.add("motion-safe:animate-fadeIn");
+                }
+            });
+            const titlebar = document
+                .querySelector(".titlebar")
+                .getBoundingClientRect().bottom;
+            const navbar = document
+                .querySelector(".navbar")
+                .getBoundingClientRect().bottom;
+            if (titlebar <= navbar) {
+                document
+                    .querySelector(".navbar")
+                    .classList.add("border-b-2", "border-solid", "border-pink");
+            } else {
+                document
+                    .querySelector(".navbar")
+                    .classList.remove(
+                        "border-b-2",
+                        "border-solid",
+                        "border-pink"
+                    );
+            }
+        }
+        try {
+            document.body.onscroll = checkPos;
+        } catch (error) {
+            console.log(error);
+        }
+    });
+
     return (
         <div className="absolute w-[100%]">
             <Navbar />
-            <div className="static bg-dark h-auto text-left pt-[10vh] pb-[5vh] px-[10vw] border-b-2 border-solid border-pink">
-                <div className="text-pink font-title text-[10vw] md:text-[8vw] lg:text-[6vw] ">
-                    Background
-                </div>
-            </div>
+            <Titlebar title="Background" />
             <div className="static bg-dark h-auto text-left py-[10vh] px-[10vw]">
                 <div className="lg:grid lg:grid-cols-2">
                     <div className="lg:flex lg:items-center pb-[5vh]">
@@ -22,7 +59,7 @@ export default function Background() {
                             />
                         </div>
                     </div>
-                    <div className="lg:flex lg:items-center pb-[5vh]">
+                    <div className="lg:flex lg:items-center pb-[5vh] js-show-on-scroll opacity-0">
                         <div>
                             <div className="text-white font-title text-[3rem] ">
                                 Stellar Properties
@@ -39,7 +76,7 @@ export default function Background() {
             </div>
             <div className="static bg-dark h-auto text-left py-[10vh] px-[10vw]">
                 <div className="lg:grid lg:grid-cols-2">
-                    <div className="lg:flex lg:items-center pb-[5vh]">
+                    <div className="lg:flex lg:items-center pb-[5vh] js-show-on-scroll opacity-0">
                         <div>
                             <div className="text-white font-title text-[3rem] ">
                                 Spectroscopy
@@ -94,7 +131,7 @@ export default function Background() {
                             />
                         </div>
                     </div>
-                    <div className="lg:flex lg:items-center pb-[5vh]">
+                    <div className="lg:flex lg:items-center pb-[5vh] js-show-on-scroll opacity-0">
                         <div>
                             <div className="text-white font-title text-[3rem] ">
                                 Kepler Light Curves

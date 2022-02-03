@@ -4,7 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Navbar() {
     return (
-        <div className="sticky top-0 flex items-center justify-between py-4 bg-dark ">
+        <div className="sticky top-0 z-10 flex items-center justify-between py-4 navbar bg-dark">
             {/* Left */}
             <Link href="/">
                 <a className="ml-[5vw] mr-[3vw] text-[4vw] md:text-[2.5vw] text-pink font-title">

@@ -32,7 +32,7 @@ function Footer() {
     }
 
     return (
-        <div className="flex items-center justify-between py-6 border-t-2 border-pink bg-dark">
+        <div className="z-10 flex items-center justify-between py-6 border-t-2 border-pink bg-dark">
             {/* Left */}
             <div></div>
             {/* Right */}
