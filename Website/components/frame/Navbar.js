@@ -33,6 +33,11 @@ function Navbar() {
                         People
                     </a>
                 </Link>
+                <Link href="/logs">
+                    <a className="ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink">
+                        Logs
+                    </a>
+                </Link>
                 <a
                     className="text-[3.5vw] lg:text-[2vw] ml-[1vw] mr-[1vw] transition-all hover:transition-all hover:text-pink"
                     target="_blank"

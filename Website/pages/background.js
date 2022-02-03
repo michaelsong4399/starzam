@@ -48,7 +48,7 @@ export default function Background() {
                                 Spectoscopy is currently the most effective
                                 method in finding stellar properties. However,
                                 the properties of 14,000 stars are beyond its
-                                capabilities
+                                capabilities.
                             </div>
                         </div>
                     </div>
@@ -77,6 +77,62 @@ export default function Background() {
                                 <div className="text-white font-subtitle text-[3vw] md:text-[2vw] ">
                                     Spectroscopy Unavailable
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="static bg-dark h-auto text-left py-[10vh] px-[10vw]">
+                <div className="lg:grid lg:grid-cols-2">
+                    <div className="lg:flex lg:items-center pb-[5vh]">
+                        {/* add image */}
+                        <div className="lg:translate-x-[-5vw] ">
+                            <img
+                                src="/images/lightcurve.png"
+                                alt="background"
+                                className="w-full h-auto"
+                            />
+                        </div>
+                    </div>
+                    <div className="lg:flex lg:items-center pb-[5vh]">
+                        <div>
+                            <div className="text-white font-title text-[3rem] ">
+                                Kepler Light Curves
+                            </div>
+                            <div className="text-white font-subtitle text-[1.5rem] ">
+                                Produced by Kepler space telescope, light curves
+                                are the brightness fluctuations of a star over
+                                time. Previously used to detect exoplanets,
+                                light curves may also contain evidence for
+                                stellar properties.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="static bg-dark h-auto text-left py-[10vh] px-[10vw]">
+                <div className="lg:grid lg:grid-cols-2">
+                    <div className="lg:flex lg:items-center pb-[5vh]">
+                        {/* add image */}
+                        <div className="lg:translate-x-[-18vw] lg:translate-y-[8rem] lg:scale-150">
+                            <img
+                                src="/images/lightcurve.png"
+                                alt="background"
+                                className="w-full h-auto"
+                            />
+                        </div>
+                    </div>
+                    <div className="lg:flex lg:items-center pb-[5vh]">
+                        <div>
+                            <div className="text-white font-title text-[3rem] ">
+                                Kepler Light Curves
+                            </div>
+                            <div className="text-white font-subtitle text-[1.5rem] ">
+                                Produced by Kepler space telescope, light curves
+                                are the brightness fluctuations of a star over
+                                time. Previously used to detect exoplanets,
+                                light curves may also contain evidence for
+                                stellar properties.
                             </div>
                         </div>
                     </div>
