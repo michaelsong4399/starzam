@@ -6,11 +6,30 @@ export default function Home() {
         <div className="absolute w-[100%]">
             <Navbar />
             <div className="static bg-dark h-[50vh] lg:h-[90vh] text-center pt-[20vh]">
-                <div className="text-pink font-title text-[14vw] md:text-[10vw] lg:text-[8vw] ">
+                <div className="text-pink font-title text-[14vw] md:text-[10vw] lg:text-[8vw]">
                     Starzam.
                 </div>
-                <div className="text-white font-title text-[4vw] md:text-[3vw] lg:text-[2.5vw] ">
+                <div className="text-white font-title text-[4vw] md:text-[3vw] lg:text-[2.5vw]">
                     Star properties, measured from light curves.
+                </div>
+                <div className="grid grid-cols-2 pt-[2vh] w-[30vw] ml-auto mr-auto">
+                    <a
+                        href="https://github.com/michaelsong4399/starzam/releases"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        <img
+                            className="ml-auto mr-auto"
+                            alt="GitHub tag (latest by date)"
+                            src="https://img.shields.io/github/v/tag/michaelsong4399/starzam?label=Github&style=for-the-badge"></img>
+                    </a>
+                    <a
+                        href="https://github.com/michaelsong4399/starzam/commits/master"
+                        rel="noopener noreferrer"
+                        target="_blank">
+                        <img
+                            alt="GitHub last commit"
+                            src="https://img.shields.io/github/last-commit/michaelsong4399/starzam?style=for-the-badge"></img>
+                    </a>
                 </div>
             </div>
             <div className="static bg-dark h-[23vh] text-center border-solid border-t-2 md:h-[40vh]">

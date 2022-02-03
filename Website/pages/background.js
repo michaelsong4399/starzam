@@ -159,6 +159,7 @@ export default function Background() {
                             />
                         </div>
                     </div>
+
                     <div className="lg:flex lg:items-center pb-[5vh]">
                         <div>
                             <div className="text-white font-title text-[3rem] ">
