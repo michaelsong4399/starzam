@@ -7,40 +7,45 @@ export default function Background() {
     useEffect(() => {
         // Get all the elements you want to show on scroll
         function checkPos() {
-            const targets = document.querySelectorAll(".js-show-on-scroll");
-            // console.log(targets);
-            targets.forEach((target) => {
-                let el = target.getBoundingClientRect().top;
-                // console.log(el);
-                if (el <= 400) {
-                    target.classList.add("motion-safe:animate-fadeIn");
+            try {
+                const targets = document.querySelectorAll(".js-show-on-scroll");
+                // console.log(targets);
+                targets.forEach((target) => {
+                    let el = target.getBoundingClientRect().top;
+                    // console.log(el);
+                    if (el <= 400) {
+                        target.classList.add("motion-safe:animate-fadeIn");
+                    }
+                });
+                const titlebar = document
+                    .querySelector(".titlebar")
+                    .getBoundingClientRect().bottom;
+                const navbar = document
+                    .querySelector(".navbar")
+                    .getBoundingClientRect().bottom;
+                if (titlebar <= navbar) {
+                    document
+                        .querySelector(".navbar")
+                        .classList.add(
+                            "border-b-2",
+                            "border-solid",
+                            "border-pink"
+                        );
+                } else {
+                    document
+                        .querySelector(".navbar")
+                        .classList.remove(
+                            "border-b-2",
+                            "border-solid",
+                            "border-pink"
+                        );
                 }
-            });
-            const titlebar = document
-                .querySelector(".titlebar")
-                .getBoundingClientRect().bottom;
-            const navbar = document
-                .querySelector(".navbar")
-                .getBoundingClientRect().bottom;
-            if (titlebar <= navbar) {
-                document
-                    .querySelector(".navbar")
-                    .classList.add("border-b-2", "border-solid", "border-pink");
-            } else {
-                document
-                    .querySelector(".navbar")
-                    .classList.remove(
-                        "border-b-2",
-                        "border-solid",
-                        "border-pink"
-                    );
+            } catch (error) {
+                console.log(error);
             }
         }
-        try {
-            document.body.onscroll = checkPos;
-        } catch (error) {
-            console.log(error);
-        }
+
+        document.body.onscroll = checkPos;
     });
 
     return (
@@ -119,10 +124,9 @@ export default function Background() {
                     </div>
                 </div>
             </div>
-            <div className="static bg-dark h-auto text-left py-[10vh] px-[10vw]">
+            <div className="static bg-dark h-auto text-left py-[15vh] px-[10vw]">
                 <div className="lg:grid lg:grid-cols-2">
                     <div className="lg:flex lg:items-center pb-[5vh]">
-                        {/* add image */}
                         <div className="lg:translate-x-[-5vw] ">
                             <img
                                 src="/images/lightcurve.png"
@@ -149,29 +153,26 @@ export default function Background() {
             </div>
             <div className="static bg-dark h-auto text-left py-[10vh] px-[10vw]">
                 <div className="lg:grid lg:grid-cols-2">
+                    <div className="lg:flex lg:items-center pb-[5vh] js-show-on-scroll opacity-0">
+                        <div>
+                            <div className="text-white font-title text-[3rem] ">
+                                Deep Neural Network
+                            </div>
+                            <div className="text-white font-subtitle text-[1.5rem] ">
+                                Machine learning is a method of data analysis
+                                that automates analytical model building. It
+                                will help us identify patterns and extract
+                                hidden features from light curve data.
+                            </div>
+                        </div>
+                    </div>
                     <div className="lg:flex lg:items-center pb-[5vh]">
-                        {/* add image */}
-                        <div className="lg:translate-x-[-18vw] lg:translate-y-[8rem] lg:scale-150">
+                        <div className="lg:translate-x-[5vw] scale-75 ">
                             <img
-                                src="/images/lightcurve.png"
+                                src="/images/neuralnetwork2.png"
                                 alt="background"
                                 className="w-full h-auto"
                             />
-                        </div>
-                    </div>
-
-                    <div className="lg:flex lg:items-center pb-[5vh]">
-                        <div>
-                            <div className="text-white font-title text-[3rem] ">
-                                Kepler Light Curves
-                            </div>
-                            <div className="text-white font-subtitle text-[1.5rem] ">
-                                Produced by Kepler space telescope, light curves
-                                are the brightness fluctuations of a star over
-                                time. Previously used to detect exoplanets,
-                                light curves may also contain evidence for
-                                stellar properties.
-                            </div>
                         </div>
                     </div>
                 </div>

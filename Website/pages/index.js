@@ -12,7 +12,7 @@ export default function Home() {
                 <div className="text-white font-title text-[4vw] md:text-[3vw] lg:text-[2.5vw]">
                     Star properties, measured from light curves.
                 </div>
-                <div className="grid grid-cols-2 pt-[2vh] w-[30vw] ml-auto mr-auto">
+                <div className="grid grid-cols-2 pt-[2vh] w-[50vw] lg:w-[30vw] ml-auto mr-auto gap-2">
                     <a
                         href="https://github.com/michaelsong4399/starzam/releases"
                         rel="noopener noreferrer"
