@@ -32,7 +32,7 @@ export default function Home() {
                     </a>
                 </div>
             </div>
-            <div className="static bg-dark h-[23vh] text-center border-solid border-t-2 md:h-[40vh]">
+            <div className="static bg-dark h-[23vh] text-center md:h-[40vh]">
                 <div className="text-white font-title text-[4vw] md:text-[3vw] lg:text-[2.5vw] pt-[2vh]">
                     Prediction Accuracy
                 </div>
