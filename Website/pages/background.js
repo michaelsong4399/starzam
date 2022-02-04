@@ -169,7 +169,7 @@ export default function Background() {
                     <div className="lg:flex lg:items-center pb-[5vh]">
                         <div className="lg:translate-x-[5vw] scale-75 ">
                             <img
-                                src="/images/neuralnetwork2.png"
+                                src="/images/neuralnetwork.png"
                                 alt="background"
                                 className="w-full h-auto"
                             />

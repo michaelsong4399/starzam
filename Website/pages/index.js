@@ -6,6 +6,18 @@ export default function Home() {
         <div className="absolute w-[100%]">
             <Navbar />
             <div className="static bg-dark h-[50vh] lg:h-[90vh] text-center pt-[20vh]">
+                {/* Add image of kepler */}
+                <div className="absolute top-[10vh] left-[5vw] md:top-[15vh] md:left-[8vw] w-[30%] h-[30%] md:w-[20%] md:h-[20%] z-0">
+                    <a
+                        href="https://archive.stsci.edu/missions-and-data/kepler"
+                        className="">
+                        <img
+                            src="/images/kepler.png"
+                            alt="Kepler"
+                            className="transition duration-500 ease-in-out hover:scale-110"
+                        />
+                    </a>
+                </div>
                 <div className="text-pink font-title text-[14vw] md:text-[10vw] lg:text-[8vw]">
                     Starzam.
                 </div>
