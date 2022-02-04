@@ -10,6 +10,8 @@ export default function Home() {
                 <div className="absolute top-[10vh] left-[5vw] md:top-[15vh] md:left-[8vw] w-[30%] h-[30%] md:w-[20%] md:h-[20%] z-0">
                     <a
                         href="https://archive.stsci.edu/missions-and-data/kepler"
+                        rel="noopener noreferrer"
+                        target="_blank"
                         className="">
                         <img
                             src="/images/kepler.png"
